@@ -14,9 +14,6 @@ listitem2.innerHTML = "Item";
 const listitem3 = document.createElement('li');
 listitem3.innerHTML = "Of your choosing";
 list.append(listitem1, listitem2, listitem3)
-header.className = "highlight"
-let highlightedElements = Array.from(document.getElementsByClassName("highlight"));
-highlightedElements.forEach(element => {element.style.backgroundColor = "green";});
 const button = document.createElement("button");
 button.textContent = "Add new list item"
 document.body.appendChild(button);
@@ -24,10 +21,6 @@ let itemnumber = 1;
 button.addEventListener('click', function () {
     let li = document.createElement("li");
     li.textContent = "New List Item " + itemnumber;
-    li.style.color = "#" + Math.floor(Math.random()*16777215).toString(16).padStart(6,"0");
     list.append(li);
     itemnumber++;
 });
-mydiv.addEventListener("click", function () {
-    mydiv.style.backgroundColor = "#" + Math.floor(Math.random()*16777215).toString(16).padStart(6,"0");
-})
